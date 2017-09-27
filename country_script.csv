@@ -1,0 +1,249 @@
+Country,Country Code,Script
+Afghanistan,AF,persian
+Albania,AL,cyrillic
+Algeria,DZ,arabic
+American Samoa,AS,latin
+Andorra,AD,latin
+Angola,AO,latin
+Anguilla,AI,latin
+Antarctica,AQ,latin
+Antigua and Barbuda,AG,latin
+Argentina,AR,latin
+Armenia,AM,armenian
+Aruba,AW,latin
+Australia,AU,latin
+Austria,AT,latin
+Azerbaijan,AZ,latin
+Bahamas,BS,latin
+Bahrain,BH,arabic
+Bangladesh,BD,devanagari
+Barbados,BB,latin
+Belarus,BY,cyrillic
+Belgium,BE,latin
+Belize,BZ,latin
+Benin,BJ,latin
+Bermuda,BM,latin
+Bhutan,BT,tibetan
+Bolivia,BO,latin
+Bonaire,BQ,latin
+Bosnia and Herzegovina,BA,cyrillic
+Botswana,BW,latin
+Bouvet Island,BV,latin
+Brazil,BR,latin
+British Indian Ocean Territory,IO,latin
+Brunei Darussalam,BN,latin
+Bulgaria,BG,cyrillic
+Burkina Faso,BF,latin
+Burundi,BI,latin
+Cambodia,KH,khmer
+Cameroon,CM,latin
+Canada,CA,latin
+Cape Verde,CV,latin
+Cayman Islands,KY,latin
+Central African Republic,CF,latin
+Chad,TD,arabic
+Chile,CL,latin
+China,CN,hanzi
+Christmas Island,CX,latin
+Cocos (Keeling) Islands,CC,latin
+Colombia,CO,latin
+Comoros,KM,arabic
+Congo,CG,latin
+Democratic Republic of the Congo,CD,latin
+Cook Islands,CK,latin
+Costa Rica,CR,latin
+Croatia,HR,latin
+Cuba,CU,latin
+Curacao,CW,latin
+Cyprus,CY,greek
+Czech Republic,CZ,latin
+Cote d'Ivoire,CI,latin
+Denmark,DK,latin
+Djibouti,DJ,arabic
+Dominica,DM,latin
+Dominican Republic,DO,latin
+Ecuador,EC,latin
+Egypt,EG,arabic
+El Salvador,SV,latin
+Equatorial Guinea,GQ,latin
+Eritrea,ER,ethiopic
+Estonia,EE,latin
+Ethiopia,ET,ethiopic
+Falkland Islands (Malvinas),FK,latin
+Faroe Islands,FO,latin
+Fiji,FJ,latin
+Finland,FI,latin
+France,FR,latin
+French Guiana,GF,latin
+French Polynesia,PF,latin
+French Southern Territories,TF,latin
+Gabon,GA,latin
+Gambia,GM,latin
+Georgia,GE,georgian
+Germany,DE,latin
+Ghana,GH,latin
+Gibraltar,GI,latin
+Greece,GR,greek
+Greenland,GL,latin
+Grenada,GD,latin
+Guadeloupe,GP,latin
+Guam,GU,latin
+Guatemala,GT,latin
+Guernsey,GG,latin
+Guinea,GN,latin
+Guinea-Bissau,GW,latin
+Guyana,GY,latin
+Haiti,HT,latin
+Heard Island and McDonald Mcdonald Islands,HM,latin
+Holy See (Vatican City State),VA,latin
+Honduras,HN,latin
+Hong Kong,HK,hanzi
+Hungary,HU,latin
+Iceland,IS,latin
+India,IN,devanagari
+Indonesia,ID,latin
+Iran,IR,persian
+Iraq,IQ,arabic
+Ireland,IE,latin
+Isle of Man,IM,latin
+Israel,IL,hebrew
+Italy,IT,latin
+Jamaica,JM,latin
+Japan,JP,kana
+Jersey,JE,latin
+Jordan,JO,arabic
+Kazakhstan,KZ,cyrillic
+Kenya,KE,latin
+Kiribati,KI,latin
+North Korea,KP,hangul
+South Korea,KR,hangul
+Kuwait,KW,arabic
+Kyrgyzstan,KG,cyrillic
+Laos,LA,lao
+Latvia,LV,latin
+Lebanon,LB,arabic
+Lesotho,LS,latin
+Liberia,LR,latin
+Libya,LY,arabic
+Liechtenstein,LI,latin
+Lithuania,LT,latin
+Luxembourg,LU,latin
+Macao,MO,hanzi
+Macedonia,MK,cyrillic
+Madagascar,MG,latin
+Malawi,MW,latin
+Malaysia,MY,latin
+Maldives,MV,thaana
+Mali,ML,latin
+Malta,MT,latin
+Marshall Islands,MH,latin
+Martinique,MQ,latin
+Mauritania,MR,arabic
+Mauritius,MU,latin
+Mayotte,YT,latin
+Mexico,MX,latin
+Micronesia,FM,latin
+Moldova,MD,latin
+Monaco,MC,latin
+Mongolia,MN,mongolian
+Montenegro,ME,cyrillic
+Montserrat,MS,latin
+Morocco,MA,arabic
+Mozambique,MZ,latin
+Myanmar,MM,burmese
+Namibia,NA,latin
+Nauru,NR,latin
+Nepal,NP,devanagari
+Netherlands,NL,latin
+New Caledonia,NC,latin
+New Zealand,NZ,latin
+Nicaragua,NI,latin
+Niger,NE,latin
+Nigeria,NG,latin
+Niue,NU,latin
+Norfolk Island,NF,latin
+Northern Mariana Islands,MP,latin
+Norway,NO,latin
+Oman,OM,arabic
+Pakistan,PK,arabic
+Palau,PW,latin
+Palestine,PS,arabic
+Panama,PA,latin
+Papua New Guinea,PG,latin
+Paraguay,PY,latin
+Peru,PE,latin
+Philippines,PH,latin
+Pitcairn,PN,latin
+Poland,PL,latin
+Portugal,PT,latin
+Puerto Rico,PR,latin
+Qatar,QA,arabic
+Romania,RO,latin
+Russian Federation,RU,cyrillic
+Rwanda,RW,latin
+Reunion,RE,latin
+Saint Barthelemy,BL,latin
+Saint Helena,SH,latin
+Saint Kitts and Nevis,KN,latin
+Saint Lucia,LC,latin
+Saint Martin (French part),MF,latin
+Saint Pierre and Miquelon,PM,latin
+Saint Vincent and the Grenadines,VC,latin
+Samoa,WS,latin
+San Marino,SM,latin
+Sao Tome and Principe,ST,latin
+Saudi Arabia,SA,arabic
+Senegal,SN,latin
+Serbia,RS,cyrillic
+Seychelles,SC,latin
+Sierra Leone,SL,latin
+Singapore,SG,latin
+Sint Maarten (Dutch part),SX,latin
+Slovakia,SK,latin
+Slovenia,SI,cyrillic
+Solomon Islands,SB,latin
+Somalia,SO,arabic
+South Africa,ZA,latin
+South Georgia and the South Sandwich Islands,GS,latin
+South Sudan,SS,latin
+Spain,ES,latin
+Sri Lanka,LK,tamil
+Sudan,SD,arabic
+Suriname,SR,latin
+Svalbard and Jan Mayen,SJ,latin
+Swaziland,SZ,latin
+Sweden,SE,latin
+Switzerland,CH,latin
+Syrian Arab Republic,SY,arabic
+Taiwan,Province of China,TW,hanzi
+Tajikistan,TJ,persian
+United Republic of Tanzania,TZ,latin
+Thailand,TH,thai
+Timor-Leste,TL,latin
+Togo,TG,latin
+Tokelau,TK,latin
+Tonga,TO,latin
+Trinidad and Tobago,TT,latin
+Tunisia,TN,arabic
+Turkey,TR,latin
+Turkmenistan,TM,cyrillic
+Turks and Caicos Islands,TC,latin
+Tuvalu,TV,latin
+Uganda,UG,latin
+Ukraine,UA,cyrillic
+United Arab Emirates,AE,arabic
+United Kingdom,GB,latin
+United States,US,latin
+United States Minor Outlying Islands,UM,latin
+Uruguay,UY,latin
+Uzbekistan,UZ,cyrillic
+Vanuatu,VU,latin
+Venezuela,VE,latin
+Viet Nam,VN,latin
+British Virgin Islands,VG,latin
+US Virgin Islands,VI,latin
+Wallis and Futuna,WF,latin
+Western Sahara,EH,arabic
+Yemen,YE,arabic
+Zambia,ZM,latin
+Zimbabwe,ZW,latin
