@@ -33,18 +33,64 @@ class World(object):
     def col_to_lon(self, col):
         return -180 + col * self.lon_step
 
-    def fill_land(self):
+
+    def fill_land_latin(self):
+        print('determining where land is present')
+
         for cell in self.cells.keys():
+            self.cells[cell] = ' '
+
             if bm.is_land(xpt=self.col_to_lon(cell[1]), ypt=self.row_to_lat(cell[0])):
-
-                local_script = self.character_picker.get_local_script(lat=self.row_to_lat(cell[0]),
-                                                                      lon=self.col_to_lon(cell[1]))
-
-                print(local_script)
-
-                self.cells[cell] = self.character_picker.random_character(script=local_script)
+                self.cells[cell] = self.character_picker.random_character(script='latin')
             else:
                 self.cells[cell] = ' '
+
+    def fill_land(self):
+        land_cells = []
+
+        print('determining where land is present')
+
+        for cell in self.cells.keys():
+            self.cells[cell] = ' '
+
+            if bm.is_land(xpt=self.col_to_lon(cell[1]), ypt=self.row_to_lat(cell[0])):
+                land_cells.append(cell)
+
+                # local_script = self.character_picker.get_local_script(lat=self.row_to_lat(cell[0]),
+                #                                                       lon=self.col_to_lon(cell[1]))
+                #
+                # print(local_script)
+
+                # self.cells[cell] = self.character_picker.random_character(script=local_script)
+
+        print(land_cells)
+
+
+
+        coords_tuple = [(self.row_to_lat(coord[0]), self.col_to_lon(coord[1])) for coord in land_cells]
+        print(coords_tuple)
+
+        print('performing reverse lookup')
+        results = rg.search(coords_tuple)
+
+        print(results)
+
+        print('assigning characters')
+        for result_index in range(0, len(results)):
+            country_code = results[result_index]['cc']
+
+            if country_code in self.character_picker.country_scripts['Country Code'].values:
+                country_code_index = list(self.character_picker.country_scripts['Country Code'].values).index(country_code)
+
+                script = self.character_picker.country_scripts['Script'][country_code_index]
+
+                print(script)
+
+                self.cells[land_cells[result_index]] = self.character_picker.random_character(script=script)
+
+            else:
+                print('unknown country code: %s' % country_code)
+
 
     def as_unicode(self):
         string = ''
@@ -71,20 +117,20 @@ class CharacterPicker(object):
     def __init__(self, script_character_file_path, country_scripts_file_path):
         self.script_characters = pd.read_csv(script_character_file_path)
         self.country_scripts = pd.read_csv(country_scripts_file_path, keep_default_na=False)
-
-    def get_local_script(self, lat, lon):
-        """Determine what script predominates in a local area."""
-        results = rg.search(geo_coords=(lat, lon))
-
-        country_code = results[0]['cc']
-
-        if country_code in self.country_scripts['Country Code'].values:
-            country_code_index = list(self.country_scripts['Country Code'].values).index(country_code)
-
-            return self.country_scripts['Script'][country_code_index]
-
-        print(self.country_scripts['Country Code'].values)
-        raise ValueError('unknown country code: %s' % country_code)
+    #
+    # def get_local_script(self, lat, lon):
+    #     """Determine what script predominates in a local area."""
+    #     results = rg.search(geo_coords=(lat, lon))
+    #
+    #     country_code = results[0]['cc']
+    #
+    #     if country_code in self.country_scripts['Country Code'].values:
+    #         country_code_index = list(self.country_scripts['Country Code'].values).index(country_code)
+    #
+    #         return self.country_scripts['Script'][country_code_index]
+    #
+    #     print(self.country_scripts['Country Code'].values)
+    #     raise ValueError('unknown country code: %s' % country_code)
 
     def random_character(self, script):
         """Pick a random character from a given script."""
@@ -98,7 +144,13 @@ class CharacterPicker(object):
 
             character = character_set[np.random.randint(0, characters_in_script)]
 
-            print(character)
+            # to deal with hanzi characters being twice the width of other unicode characters, simply delete half of
+            # them
+            # if script == 'hanzi':
+            #     if np.random.randint(0,2) > 0:
+            #         character = ''
+
+            # print(character)
 
             return character
 
@@ -110,11 +162,12 @@ def main():
     character_picker = CharacterPicker(script_character_file_path='./script_characters.csv',
                                        country_scripts_file_path='./country_scripts.csv')
 
-    world = World(width=300, height=90, max_mod_lat=85, character_picker=character_picker)
+    world = World(width=1000, height=300, max_mod_lat=85, character_picker=character_picker)
 
     print('World contains ' + str(len(world.cells)) + ' cells')
 
-    world.fill_land()
+    # world.fill_land()
+    world.fill_land_latin()
 
     world_string = world.as_unicode()
 
