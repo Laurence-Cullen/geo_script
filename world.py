@@ -10,7 +10,6 @@ import pandas as pd
 bm = Basemap()   # default: projection='cyl'
 
 
-
 class World(object):
     def __init__(self, width, height, max_mod_lat, character_picker):
         self.width = width
@@ -73,9 +72,6 @@ class CharacterPicker(object):
         self.script_characters = pd.read_csv(script_character_file_path)
         self.country_scripts = pd.read_csv(country_scripts_file_path, keep_default_na=False)
 
-        # print(self.script_characters)
-
-
     def get_local_script(self, lat, lon):
         """Determine what script predominates in a local area."""
         results = rg.search(geo_coords=(lat, lon))
@@ -96,7 +92,7 @@ class CharacterPicker(object):
 
             script_index = list(self.script_characters['Script'].values).index(script)
 
-            character_set = list(self.script_characters['Characters'][script_index].decode(("utf-8")))
+            character_set = list(self.script_characters['Characters'][script_index].decode("utf-8"))
 
             characters_in_script = len(character_set)
 
@@ -123,8 +119,6 @@ def main():
     world_string = world.as_unicode()
 
     print(world_string)
-
-
 
 
 if __name__ == '__main__':
