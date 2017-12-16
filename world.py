@@ -2,18 +2,12 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import division
-
-# installation instructions and dependencies here https://matplotlib.org/basemap/users/installing.html
-from mpl_toolkits.basemap import Basemap
-
-# pip install reverse_geocoder
-import reverse_geocoder as rg
-
+from mpl_toolkits.basemap import Basemap  # conda install basemap
+import reverse_geocoder as rg  # pip install reverse_geocoder
 import numpy as np
 import pandas as pd
 
 bm = Basemap()   # default: projection='cyl'
-
 
 class World(object):
     """
@@ -184,7 +178,7 @@ def main():
 
     print('World contains ' + str(len(world.cells)) + ' cells')
 
-    world.fill_land(hard_coded_script='latin')
+    world.fill_land()
 
     world_string = world.as_unicode()
 
